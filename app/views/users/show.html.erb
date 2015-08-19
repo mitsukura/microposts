@@ -1,4 +1,18 @@
-<h1>
-    <%= gravatar_for @user %>
-    <%= @user.name %>    
-</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+		<h1>
+		    <%= gravatar_for @user %>
+		    <%= @user.name %>
+		</h1>
+		<ul>
+			<li><span class="glyphicon glyphicon-user" aria-hidden="true"> <%= @user.profile %></li>
+		    <li><span class="glyphicon glyphicon glyphicon-inbox" aria-hidden="true"> <%= @user.email %></li>
+		    <li><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>　<%= @user.location %></li>
+		</ul>
+		</div>
+		<div class="col-md-3 col-md-offset-6">
+			<%= link_to "プロフィールを更新する", edit_user_path(@user), class: "btn btn-primary" %>
+		</div>
+	</div><!-- row -->
+</div><!-- container -->
