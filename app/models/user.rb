@@ -7,7 +7,5 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
 
     has_secure_password
-    
-    validates :profile, presence: true, length: { maximum: 200 }
-    validates :location, presence: true, length: { maximum:10}
+
 end
