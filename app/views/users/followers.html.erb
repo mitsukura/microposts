@@ -1,4 +1,4 @@
-<h1>followers - フォロワー一覧</h1>
+<h1><%= current_user.name %>のフォロワー一覧</h1>
 <% @followers.each do |f| %>
     <ul>
         <li><%= f.name %></li>
